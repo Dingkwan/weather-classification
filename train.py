@@ -24,7 +24,7 @@ model.train(
     device=device
 )
 
-# Validate the trained model on the test set
+# Evaluate the trained model on the test set
 print("Running final evaluation on test set...")
 metrics = model.val(
     data="weather_split",    # Path to dataset (test folder must exist inside)
