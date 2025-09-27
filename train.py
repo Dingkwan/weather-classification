@@ -37,4 +37,5 @@ print(metrics)
 # After training, the best model weights will be saved at:
 # runs/classify/train/weights/best.pt
 
-# And the 
+# And the testing result details, such as confusion matrix, will be saved at:
+# runs/classify/test_result
