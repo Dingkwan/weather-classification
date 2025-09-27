@@ -11,9 +11,9 @@ classes = ["cloudy", "foggy", "rainy", "shine", "sunrise"]
 output_dir = "./weather_split"
 
 # Split ratios
-train_ratio = 0.7
-val_ratio = 0.15
-test_ratio = 0.15
+train_ratio = 0.8
+val_ratio = 0.1
+test_ratio = 0.1
 
 
 def make_dirs():
@@ -60,7 +60,7 @@ def split_dataset():
 
 
 # Fix random seed for reproducibility
-random.seed(42)
+random.seed(114514)
 make_dirs()
 train_count, val_count, test_count = split_dataset()
 print("------------------------")
