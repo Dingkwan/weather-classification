@@ -209,3 +209,4 @@ __marimo__/
 /weather_split
 *.pt
 /runs
+*.json
