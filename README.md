@@ -1,4 +1,6 @@
-# <p align="center">Weather classification network based on YOLO11<br>基于YOLO11的天气分类网络</p>
+# <p align="center">
+Weather classification network based on YOLO11<br>基于YOLO11的天气分类网络
+</p>
 
 This is a weather classification network based on the [YOLO11l-cls](https://docs.ultralytics.com/models/yolo11/) model. It is trained using a [custom dataset](https://www.kaggle.com/datasets/vijaygiitk/multiclass-weather-dataset). The model after transfer learning is located in the project root directory, named `yolo11-best.pt`.
 <br>
