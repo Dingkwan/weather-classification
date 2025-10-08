@@ -32,7 +32,7 @@ With the following package:
 
 After downloading and unzipping the dataset, the dataset structure should look like this:
 <br>
-当下载好并解压数据集之后，数据集的结构应该是这样：
+下载好并解压数据集之后，数据集的结构应该是这样：
 
 ```
 multiclass-weather-dataset
