@@ -5,8 +5,10 @@ This is a weather classification network based on the [YOLO11l-cls](https://docs
 这是一个基于[YOLO11l-cls](https://docs.ultralytics.com/models/yolo11/)模型的天气分类网络。使用一个[自定义数据集](https://www.kaggle.com/datasets/vijaygiitk/multiclass-weather-dataset)训练而成。迁移学习后的模型位于项目根目录，名为`yolo11-best.pt`。
 
 - Dataset download link 数据集下载链接
-<br>
-    > https://www.kaggle.com/datasets/vijaygiitk/multiclass-weather-dataset
+
+    ```
+    https://www.kaggle.com/datasets/vijaygiitk/multiclass-weather-dataset
+    ```
 
 ## Environment 运行环境
 
