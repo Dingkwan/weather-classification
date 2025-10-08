@@ -209,4 +209,4 @@ __marimo__/
 /weather_split
 /runs
 *.json
-yolo11l-cls.pt
+*.pt
