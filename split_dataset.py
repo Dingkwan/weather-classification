@@ -4,7 +4,7 @@ import shutil
 import random
 
 # Root directory of the dataset
-dataset_dir = "/Users/dingkwanmok/Desktop/test/dataset"  # Change this to your dataset path
+dataset_dir = "path/to/your/dataset"  # Change this to your dataset path
 # Target classes
 classes = ["cloudy", "foggy", "rainy", "shine", "sunrise"]
 # Output directory

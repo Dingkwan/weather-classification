@@ -73,4 +73,35 @@ This dataset contains 5 weather conditions, each of which is located in a corres
 - shine
 - sunrise
 
+These 5 weather conditions and the images in the corresponding folders will be used for training.
+<br>
+这5种天气条件和对应文件夹内的图片将会被用作训练。
+
+## Split the dataset 分割数据集
+
+To split the dataset, in the `split_dataset.py` set:
+<br>
+为了分割数据集，在`split_dataset.py`中修改参数：
+
+```
+dataset_dir = "path/to/dataset"
+```
+
+and
+
+```
+output_dir = "./weather_split"
+```
+
+Then, run `split_dataset.py`. The split dataset will be in the directory specified by `output_dir`.
+<br>
+然后，运行`split_dataset.py`。分割后的数据集将会在`output_dir`所指定的目录中。
+
+The structure of the split dataset will be like this:
+<br>
+分割后的数据集结构看起来将会像这样：
+
+
+
+
 ## Work in progress...
