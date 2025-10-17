@@ -158,6 +158,38 @@ Now, the dataset is ready.
 <br>
 现在，数据集已经准备好了。
 
+## Training model 训练模型
+
+The training script is provided in the `train.py` file.
+<br>
+训练模型的代码在`train.py`文件内。
+
+Before running `train.py`, you need to check:
+<br>
+在运行`train.py`前，需要检查:
+
+```
+model.train(
+    data="./weather_split",   # Path to dataset (train/val folders must exist inside)
+    epochs=50,
+    imgsz=320,
+    batch=32,
+    device=device
+)
+
+...
+
+metrics = model.val(
+    data="./weather_split",    # Path to dataset (test folder must exist inside)
+    split="test",
+    device=device,
+    name="test_result"
+)
+```
+Please make sure the `data` parameter is the path of the split dataset.
+<br>
+请确保`data`参数确实指向的是分割后数据集的路径。
+
 ## Weather classification 天气分类
 
 ## Work in progress...
