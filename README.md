@@ -214,7 +214,7 @@ There are two classification modes provided, and their codes are stored in `infe
     它的代码位于 `infer_folder.py` 中。通过输入文件夹路径，分类文件夹中图片的天气。并将结果保存在JSON文件中。
 
 
-> For direct inference, by default, the trained model is located in the project root directory and is named `yolo11-best.pt`. Modify the `weights_path` parameter to the path to this model.
+> For direct inference, by default, the trained model is located in the project root directory and is named `yolo11-best.pt`. Modify the `weights_path` parameter to the path of this model.
 > <br>
 > 如果想直接使用已经训练好的模型，默认情况下，训练好的模型位于项目根目录，名为 `yolo11-best.pt` 。将 `weights_path` 参数修改为这个模型的路径即可。
 
