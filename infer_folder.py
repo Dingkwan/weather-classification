@@ -6,10 +6,10 @@ import torch
 from ultralytics import YOLO
 
 # -------- User settings (edit these paths) --------
-WEIGHTS_PATH = "best.pt"   # path to your trained weights
-INPUT_DIR    = "weather_split/test/rainy"  # folder to predict
-OUTPUT_JSON  = "infer_results.json"                     # output json path
-IMG_SIZE     = 320                                      # inference image size
+weights_path = "./best.pt"   # path to your trained weights
+input_dir    = "weather_split/test/rainy"  # folder to predict
+output_json  = "infer_results.json"                     # output json path
+img_size     = 320                                      # inference image size
 # --------------------------------------------------
 
 # Select device
@@ -22,30 +22,30 @@ else:
 print(f"Using device: {device}")
 
 # Basic checks
-if not os.path.exists(WEIGHTS_PATH):
-    raise FileNotFoundError(f"Weights not found: {WEIGHTS_PATH}")
-if not os.path.isdir(INPUT_DIR):
-    raise NotADirectoryError(f"Input directory not found: {INPUT_DIR}")
+if not os.path.exists(weights_path):
+    raise FileNotFoundError(f"Weights not found: {weights_path}")
+if not os.path.isdir(input_dir):
+    raise NotADirectoryError(f"Input directory not found: {input_dir}")
 
 # Collect images (non-recursive). Add/remove extensions as needed.
 exts = ["*.jpg", "*.jpeg", "*.png", "*.bmp", "*.tif", "*.tiff", "*.webp", "*.heic"]
 images = []
 for ext in exts:
-    images.extend(glob.glob(os.path.join(INPUT_DIR, ext)))
+    images.extend(glob.glob(os.path.join(input_dir, ext)))
 images = sorted({os.path.abspath(p) for p in images})
 
-print(f"Found {len(images)} images in: {INPUT_DIR}")
+print(f"Found {len(images)} images in: {input_dir}")
 if not images:
     # Write empty JSON and exit cleanly
-    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+    with open(output_json, "w", encoding="utf-8") as f:
         json.dump([], f, ensure_ascii=False, indent=2)
-    print(f"No images found. Wrote empty JSON to: {os.path.abspath(OUTPUT_JSON)}")
+    print(f"No images found. Wrote empty JSON to: {os.path.abspath(output_json)}")
 else:
     # Load classification model
-    model = YOLO(WEIGHTS_PATH)
+    model = YOLO(weights_path)
 
     # Run prediction in a single call; Ultralytics will iterate internally
-    results = model.predict(source=images, imgsz=IMG_SIZE, device=device, verbose=False)
+    results = model.predict(source=images, imgsz=img_size, device=device, verbose=False)
 
     # Build minimal JSON: image absolute path + top-1 class name
     output = []
@@ -63,7 +63,7 @@ else:
         })
 
     # Save JSON
-    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
+    with open(output_json, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"Saved results to: {os.path.abspath(OUTPUT_JSON)}")
+    print(f"Saved results to: {os.path.abspath(output_json)}")
