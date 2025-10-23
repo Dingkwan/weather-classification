@@ -203,9 +203,9 @@ There are two classification modes provided, and their codes are stored in `infe
 
 - Single image classification 单张图片分类
 
-    Its code is located in `infer_one_pic.py`. Its function is to input a picture and classify the weather of the picture.
+    Its code is located in `infer_one_pic.py`. Its function is to input a picture, classify the weather in the picture, and output it to the console.
     <br>
-    它的功能是输入一张图片，分类图片中的天气。
+    它的代码位于`infer_one_pic.py`。它的功能是输入一张图片，分类图片中的天气，并在控制台输出。
 
 
 ## Work in progress...
