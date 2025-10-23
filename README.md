@@ -166,7 +166,7 @@ The training script is provided in the `train.py` file.
 
 Before running `train.py`, you need to check:
 <br>
-在运行`train.py`前，需要检查:
+在运行 `train.py` 前，需要检查:
 
 ```
 dir_dataset = "./weather_split"
@@ -216,7 +216,7 @@ There are two classification modes provided, and their codes are stored in `infe
 
 > For direct inference, by default, the trained model is located in the project root directory and is named `yolo11-best.pt`. Modify the `weights_path` parameter to the path to this model.
 > <br>
-> 如果想直接使用已经训练好的模型，默认情况下，训练好的模型位于项目根目录，名为 `yolo11-best.pt` 。将`weights_path`参数修改为这个模型的路径即可。
+> 如果想直接使用已经训练好的模型，默认情况下，训练好的模型位于项目根目录，名为 `yolo11-best.pt` 。将 `weights_path` 参数修改为这个模型的路径即可。
 
 
 
@@ -229,6 +229,17 @@ In the `infer_one_pic.py` file, make sure `weights_path` parameter is the path t
 ```
 weights_path = "./best.pt"   # Change this to your actual model path
 image_path = "./weather_split/test/rainy/rain275.jpg"  # Change this to your image
+```
+
+Run `infer_one_pic.py`.
+<br>
+运行 `infer_one_pic.py`。
+
+The output in console will look like this: 
+<br>
+在控制台的输出看起来会像这样：
+
+```
 ```
 
 ## Work in progress...
