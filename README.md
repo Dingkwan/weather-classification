@@ -215,8 +215,8 @@ There are two classification modes provided, and their codes are stored in `infe
 
 
 > For direct inference, by default, the trained model is located in the project root directory and is named `yolo11-best.pt`. Modify the `weights_path` parameter to the path to this model.
-<br>
-如果想直接使用已经训练好的模型，默认情况下，训练好的模型位于项目根目录，名为 `yolo11-best.pt` 。将`weights_path`参数修改为这个模型的路径即可。
+> <br>
+> 如果想直接使用已经训练好的模型，默认情况下，训练好的模型位于项目根目录，名为 `yolo11-best.pt` 。将`weights_path`参数修改为这个模型的路径即可。
 
 
 
