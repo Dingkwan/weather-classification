@@ -36,7 +36,7 @@ With the following package:
 
 If you want to use the trained model to perform inference directly, please refer to the "Weather classification" part.
 <br>
-如果想要使用已经训练好的模型直接进行推理，请参考”天气分类“部分。
+如果想要使用已经训练好的模型直接进行推理，请参考“[天气分类](#weather-classification-天气分类)”部分。
 
 
 ## Prepare the dataset 准备数据集
@@ -190,6 +190,28 @@ Please make sure the `data` parameter is the path of the split dataset.
 <br>
 请确保`data`参数确实指向的是分割后数据集的路径。
 
+Then, run `train.py` to train the model.
+<br>
+然后，运行`train.py`以训练模型。
+
+After training, the best model weights will be saved at:
+<br>
+训练完成后，最佳的权重文件将会被保存在：
+
+```
+runs/classify/train/weights/best.pt
+```
+
+And the testing result details, such as confusion matrix, will be saved at:
+<br>
+测试细节（例如混淆矩阵）会保存在：
+
+```
+runs/classify/test_result
+```
+
 ## Weather classification 天气分类
+
+
 
 ## Work in progress...
