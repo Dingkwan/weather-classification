@@ -34,7 +34,7 @@ With the following package:
 
 ## Direct inference 直接使用
 
-If you want to use the trained model to perform inference directly, please refer to the "Weather classification" part.
+If you want to use the trained model to perform inference directly, please refer to the "[Weather classification](#weather-classification-天气分类)" part.
 <br>
 如果想要使用已经训练好的模型直接进行推理，请参考“[天气分类](#weather-classification-天气分类)”部分。
 
@@ -169,26 +169,11 @@ Before running `train.py`, you need to check:
 在运行`train.py`前，需要检查:
 
 ```
-model.train(
-    data="./weather_split",   # Path to dataset (train/val folders must exist inside)
-    epochs=50,
-    imgsz=320,
-    batch=32,
-    device=device
-)
-
-...
-
-metrics = model.val(
-    data="./weather_split",    # Path to dataset (test folder must exist inside)
-    split="test",
-    device=device,
-    name="test_result"
-)
+dir_dataset = "./weather_split"
 ```
-Please make sure the `data` parameter is the path of the split dataset.
+Please make sure the `dir_dataset` parameter is the path of the split dataset.
 <br>
-请确保`data`参数确实指向的是分割后数据集的路径。
+请确保`dir_dataset`参数确实指向的是分割后数据集的路径。
 
 Then, run `train.py` to train the model.
 <br>
@@ -212,6 +197,15 @@ runs/classify/test_result
 
 ## Weather classification 天气分类
 
+There are two classification modes provided, and their codes are stored in `infer_one_pic.py` and `infer_folder.py` respectively:
+<br>
+有两种分类模式，它们的代码分别保存在`infer_one_pic.py`和`infer_folder.py`中：
+
+- Single image classification 单张图片分类
+
+    Its code is located in `infer_one_pic.py`. Its function is to input a picture and classify the weather of the picture.
+    <br>
+    它的功能是输入一张图片，分类图片中的天气。
 
 
 ## Work in progress...

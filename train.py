@@ -12,12 +12,17 @@ else:
 
 print(f"Using device: {device}")
 
+
+# Path to dataset (train/val folders must exist inside)
+dir_dataset = "./weather_split"
+
+
 # Load a pretrained YOLO11 classification model (large version)
 model = YOLO("yolo11l-cls.pt")
 
 # Train the model on the custom weather dataset
 model.train(
-    data="./weather_split",   # Path to dataset (train/val folders must exist inside)
+    data=dir_dataset,   
     epochs=50,
     imgsz=320,
     batch=32,
@@ -27,7 +32,7 @@ model.train(
 # Evaluate the trained model on the test set
 print("Running final evaluation on test set...")
 metrics = model.val(
-    data="./weather_split",    # Path to dataset (test folder must exist inside)
+    data=dir_dataset,
     split="test",
     device=device,
     name="test_result"
