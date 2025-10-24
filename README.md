@@ -270,4 +270,6 @@ The output in the JSON file will look like this:
     "confidence: ": 1.0
   }
 ```
-## Work in progress...
+<br>
+
+# <p align="center">Enjoy~~ 🥳🍻</p>
