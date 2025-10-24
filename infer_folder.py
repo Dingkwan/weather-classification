@@ -6,7 +6,7 @@ import torch
 from ultralytics import YOLO
 
 # -------- User settings (edit these paths) --------
-weights_path = "./best.pt"   # path to your trained weights
+weights_path = "./yolo11_best.pt"   # path to your trained weights
 input_dir    = "weather_split/test/rainy"  # folder to predict
 output_json  = "infer_results.json"                     # output json path
 img_size     = 320                                      # inference image size
@@ -56,10 +56,13 @@ else:
 
         top1_idx = int(probs.top1)
         pred_name = names[top1_idx]
+        top1_conf = r.probs.top1conf.item()
+
 
         output.append({
             "image": img_path,
-            "prediction": pred_name
+            "prediction": pred_name,
+            "confidence: ": round(top1_conf,2)
         })
 
     # Save JSON
