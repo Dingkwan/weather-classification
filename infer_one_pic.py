@@ -13,7 +13,7 @@ else:
 print(f"Using device: {device}")
 
 # Specify trained model weights and test image path
-weights_path = "./best.pt"   # Change this to your actual model path
+weights_path = "./yolo11_best.pt"   # Change this to your actual model path
 image_path = "./weather_split/test/rainy/rain275.jpg"  # Change this to your image
 
 # Load trained model

@@ -240,6 +240,36 @@ The output in console will look like this:
 在控制台的输出看起来会像这样：
 
 ```
+Predicted: rainy (confidence 1.00)
 ```
 
-## Work in progress...
+### Folder image classification 文件夹图片分类
+
+In the `infer_folder.py` file, make sure the `weights_path` parameter is the path to the model; the `input_dir` parameter is the path to the folder containing the images to be classified; `output_json` is the output path to the JSON file containing the classification results.
+<br>
+在 `infer_folder.py` 文件中，确保 `weights_path` 参数为模型的路径；`input_dir` 参数为包含欲分类图片的文件夹的路径； ` output_json` 为包含分类结果的JSON文件的输出路径。
+
+```
+weights_path = "./best.pt"   # path to your trained weights
+input_dir    = "weather_split/test/rainy"  # folder to predict
+output_json  = "infer_results.json"                     # output json path
+```
+
+Run `infer_folder.py`.
+<br>
+运行 `infer_folder.py`。
+
+The output in the JSON file will look like this:
+<br>
+在JSON文件的输出看起来会像这样：
+
+```
+  {
+    "image": "/Users/dingkwanmok/Desktop/test/weather-classification/weather_split/test/rainy/rain107.jpg",
+    "prediction": "rainy",
+    "confidence: ": 1.0
+  }
+```
+<br>
+
+# <p align="center">Enjoy~~ 🥳🍻</p>
