@@ -171,9 +171,9 @@ Before running `train.py`, you need to check:
 ```
 dir_dataset = "./weather_split"
 ```
-Please make sure the `dir_dataset` parameter is the path of the split dataset.
+Please make sure the `dir_dataset` parameter is the path of the **split dataset**.
 <br>
-请确保 `dir_dataset` 参数确实指向的是分割后数据集的路径。
+请确保 `dir_dataset` 参数确实指向的是**分割后数据集**的路径。
 
 Then, run `train.py` to train the model.
 <br>
@@ -247,7 +247,7 @@ Predicted: rainy (confidence 1.00)
 
 In the `infer_folder.py` file, make sure the `weights_path` parameter is the path to the model; the `input_dir` parameter is the path to the folder containing the images to be classified; `output_json` is the output path to the JSON file containing the classification results.
 <br>
-在 `infer_folder.py` 文件中，确保 `weights_path` 参数为模型的路径；`input_dir` 参数为包含欲分类图片的文件夹的路径； ` output_json` 为包含分类结果的JSON文件的输出路径。
+在 `infer_folder.py` 文件中，确保 `weights_path` 参数为模型的路径；`input_dir` 参数为包含欲分类图片的文件夹的路径； `output_json` 为包含分类结果的JSON文件的输出路径。
 
 ```
 weights_path = "./best.pt"   # path to your trained weights
